@@ -1,0 +1,42 @@
+.container {
+  gap: 1rem;
+  background-color: #f8f9fa; 
+  border-radius: 12px;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #fff;
+  padding: 1rem .25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: green; 
+  width: 25px;
+  height: 32px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25re;
+}
+
+.text {
+  font-size: 0.875rem;
+  color: #6b7280; 
+  display: block;
+}
+
+.lottie {
+  border-radius: 10px;
+}

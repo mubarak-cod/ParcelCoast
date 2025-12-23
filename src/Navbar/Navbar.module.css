@@ -1,0 +1,368 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.container {
+  /* max-width: 1200px; */
+  height: 64px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #22c55e;
+}
+
+/* ========== DESKTOP NAV ========== */
+.desktopNav {
+  display: flex;
+  gap: 32px;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.navButton:hover {
+  color: #22c55e;
+}
+
+.navButton svg {
+  transition: transform 0.3s;
+}
+
+.navItem:hover .navButton svg {
+  transform: rotate(180deg);
+}
+
+/* ========== DROPDOWN ========== */
+.dropdown {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 150;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdownIcon {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+.dropdownItem p {
+  color: black;
+  font-size: 14px;
+  margin: 0;
+}
+
+.dropdownItem span {
+  font-size: 12px;
+  color: rgba(0,0,0,0.5);
+}
+
+.dropdownItem:hover p {
+  color: #22c55e;
+}
+
+/* ========== ACTIONS ========== */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Search Box */
+.searchBox {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+}
+
+.searchBox input {
+  width: 100%;
+  padding: 10px 42px 10px 16px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: white;
+  color: black;
+}
+
+.searchBox input::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  color: black;
+}
+
+/* Account Dropdown */
+.accountWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.accountBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background 0.2s;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.accountBtn:hover {
+  /* background: rgba(0,0,0,0.05); */
+}
+
+.accountDropdown {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  width: 220px;
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  z-index: 200;
+}
+
+.accountDropdown p {
+  color: black;
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.accountDropdown p:hover {
+  color: #22c55e;
+}
+
+.accountDropdown hr {
+  border: none;
+  height: 1px;
+  background: rgba(0,0,0,0.1);
+  margin: 8px 0;
+}
+
+.signIn {
+  background: #22c55e;
+  color: white;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.signOut {
+  color: #ef4444;
+  text-align: center;
+  padding: 6px 0;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Cart */
+.cartWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.cartIcon {
+  color: black;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger */
+.menuBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  display: none;
+}
+
+/* ========== DRAWER (TABLET & MOBILE) ========== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 150;
+}
+
+.drawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 24px;
+  border-radius: 24px 24px 0 0;
+  z-index: 200;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.drawerSection {
+  margin-bottom: 24px;
+}
+
+.drawerSection h4 {
+  color: black;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.drawerSection p {
+  color: rgba(0,0,0,0.7);
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.drawerSection p:hover {
+  color: #22c55e;
+}
+
+.drawerAccount {
+  margin-top: 24px;
+}
+
+.mobileSearchRow {
+    display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .container {
+      padding: 0 10px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .searchBox {
+    flex: none;
+    width: 100%;
+    max-width: unset;
+    margin-right: 8px;
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+  
+  .mobileSearchRow{
+    display: block;
+    width: 100%;
+  }
+
+  .searchBoxx {
+    padding: 10px 10px;
+  }
+
+  .searchBoxx input {
+   flex: none;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .searchIcon {
+  position: absolute;
+  right: 25px;
+  top: 78%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  color: black;
+}
+
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
+
+

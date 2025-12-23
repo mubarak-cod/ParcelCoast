@@ -1,0 +1,101 @@
+.hero {
+  width: 100%;
+  padding: 10px 5px;
+  position: relative;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.inner {
+  /* margin-top: 60px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  flex-shrink: 0;
+}
+
+.center {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ================= MOBILE CONTROLS ================= */
+
+.mobileControls {
+  /* display: none; */
+  gap: 12px;
+  margin-bottom: 10px;
+
+  position: relative;
+  /* background-color: red; */
+  z-index: 20;
+}
+
+.mobileControls button {
+  /* background: #fff; */
+  /* border: 1px solid red; */
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  height: 30px;
+  width: 60px;
+}
+
+/* ================= SLIDE PANELS ================= */
+
+.slideLeft,
+.slideRight {
+  position: fixed;
+  top: 20%;
+  bottom: 0;
+  width: 85%;
+  max-width: 320px;
+  background: #fff;
+  z-index: 100;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.slideLeft {
+  left: 0;
+}
+
+.slideRight {
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: black;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .left,
+  .right {
+    display: none;
+  }
+
+  .mobileControls {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .inner {
+    margin-top: 0;
+  }
+}
