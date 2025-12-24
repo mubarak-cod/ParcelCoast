@@ -169,20 +169,90 @@ export default function Navbar() {
 
               {/* Navigation */}
               <div className={styles.drawerNav}>
-                {navItems.map((item) => (
-                  <div key={item.label} className={styles.drawerSection}>
-                    <h4>{item.label}</h4>
-                    <div className={styles.drawerLinks}>
-                      {item.links.map((link) => (
-                        <p key={link.name}>{link.name}</p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                {navItems.map((item) => {
+  const isOpen = openSection === item.label;
+
+  return (
+    <div key={item.label} className={styles.drawerSection}>
+      <button
+        className={styles.drawerHeader}
+        onClick={() =>
+          setOpenSection(isOpen ? null : item.label)
+        }
+      >
+        <span>{item.label}</span>
+        <MdKeyboardArrowDown
+          className={`${styles.drawerArrow} ${
+            isOpen ? styles.rotate : ""
+          }`}
+        />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className={styles.drawerLinks}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+          >
+            {item.links.map((link) => {
+              const Icon = link.icon;
+              return (
+                <div key={link.name} className={styles.drawerLinkItem}>
+                  {Icon && <Icon size={16} />}
+                  <span>{link.name}</span>
+                </div>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+})}
+
               </div>
+<div className={styles.drawerSection}>
+  <button
+    className={styles.drawerHeader}
+    onClick={() =>
+      setOpenSection(
+        openSection === "account" ? null : "account"
+      )
+    }
+  >
+    <span>My Account</span>
+    <MdKeyboardArrowDown
+      className={`${styles.drawerArrow} ${
+        openSection === "account" ? styles.rotate : ""
+      }`}
+    />
+  </button>
+
+  <AnimatePresence>
+    {openSection === "account" && (
+      <motion.div
+        className={styles.drawerLinks}
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: "auto", opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+      >
+        <p>My Orders</p>
+        <p>Saved Items</p>
+        <p>Payment Methods</p>
+        <p>Shipping Addresses</p>
+        <p>Settings</p>
+        <p>Help Center</p>
+        <p className={styles.signIn}>Sign In</p>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
 
               {/* Account */}
-              <div className={styles.drawerAccount}>
+              {/* <div className={styles.drawerAccount}>
                 <p>My Orders</p>
                 <p>Saved Items</p>
                 <p>Payment Methods</p>
@@ -191,7 +261,7 @@ export default function Navbar() {
                 <p>Help Center</p>
 
                 <button className={styles.drawerSignIn}>Sign In</button>
-              </div>
+              </div> */}
             </motion.div>
           </>
         )}

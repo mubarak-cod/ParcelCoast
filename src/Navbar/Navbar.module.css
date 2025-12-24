@@ -366,3 +366,45 @@
 }
 
 
+
+
+.drawerHeader {
+  width: 100%;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.drawerArrow {
+  font-size: 22px;
+  transition: transform 0.25s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.drawerLinks {
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.drawerLinkItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: rgba(0,0,0,0.75);
+}
+
+.drawerLinkItem:hover {
+  color: #22c55e;
+}

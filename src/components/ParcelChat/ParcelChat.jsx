@@ -19,29 +19,36 @@ export default function ParcelChat() {
       {/* CHAT ICON */}
       {/* CHAT ICON */}
       <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={mounted ? { scale: 1, opacity: 1 } : {}}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        initial={{ scale: 1 }}
+        animate={{
+          rotate: [0, -4, 4, -3, 3, -2, 0],
+          y: [0, -2, 2, -1, 1, 0],
+        }}
+        transition={{
+          duration: 2.8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         className={styles.chatIcon}
         onClick={() => setOpen(true)}
-      >
-        <Image
-          src="https://res.cloudinary.com/dmtfdnuap/image/upload/v1766429344/929c7667-bef0-413d-8714-dde8b2f5d0c2.png"
-          alt="Parcel Coast AI"
-          width={56}
-          height={56}
-        />
+      > 
+        <div className={styles.avatarWrapper}>
+          <Image
+            src="https://res.cloudinary.com/dmtfdnuap/image/upload/v1766429344/929c7667-bef0-413d-8714-dde8b2f5d0c2.png"
+            alt="Parcel Coast AI"
+            width={56}
+            height={56}
+          />
+        </div>
 
-        {/* CHAT LABEL */}
         {!open && (
           <motion.span
             initial={{ x: 10, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 10, opacity: 0 }}
             transition={{ delay: 0.2 }}
             className={styles.chatLabel}
           >
-            Chat with Chinudu AI
+            Chat with Chinedu AI
           </motion.span>
         )}
       </motion.div>
@@ -79,8 +86,9 @@ export default function ParcelChat() {
             {/* BODY */}
             <div className={styles.body}>
               <div className={styles.aiMessage}>
-                👋 Hi! I’m your Parcel Coast sales assistant. I can help you
-                track orders, discover products, and recommend the best deals.
+                👋 Hi! I’m chinedu, your Parcel Coast sales assistant. I can
+                help you track orders, discover products, and recommend the best
+                deals.
               </div>
             </div>
 

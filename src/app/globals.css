@@ -1,42 +1,105 @@
+/* ================================
+   CSS VARIABLES (THEME TOKENS)
+================================ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Typography */
+  --font-satoshi: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fff;
-    --foreground: #000;
+    --background: #ffffff;
+    --foreground: #000000;
   }
 }
 
+/* ================================
+   BASE RESET
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   HTML & BODY
+================================ */
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+
+  /* IMPORTANT:
+     --font-satoshi is injected from layout.js
+  */
+  font-family: var(--font-satoshi);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Dark mode hint for browser UI */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
 
+/* ================================
+   ELEMENT NORMALIZATION
+================================ */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* ================================
+   OPTIONAL: TYPOGRAPHY HELPERS
+   (You can remove if not needed)
+================================ */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 400;
 }
