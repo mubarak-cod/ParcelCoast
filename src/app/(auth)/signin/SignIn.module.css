@@ -1,0 +1,145 @@
+.container {
+  min-height: 100vh;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.201);
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background: white;
+  color: black;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: green;
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 14px;
+  background: green;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.primaryBtn:hover {
+  background: rgba(0, 128, 0, 0.934);
+}
+
+.terms {
+  font-size: 12px;
+  color: #777;
+  margin: 16px 0;
+}
+
+.terms span {
+  color: green;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider span {
+  margin: 0 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.socialBtn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.facebook {
+  background: #1877f2;
+  color: #fff;
+  border: none;
+}
+
+.google {
+  background: #fff;
+  color: #000;
+}
+
+.help {
+  font-size: 13px;
+  color: #666;
+  margin-top: 16px;
+}
+
+.help span {
+  color: green;
+  cursor: pointer;
+}
+
+.brand {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.brand span {
+  color: #f68b1e;
+}

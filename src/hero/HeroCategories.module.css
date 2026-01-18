@@ -1,11 +1,10 @@
 .categories {
   background: #ffffff;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 3px 0;
   height: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  /* margin-top: 20px; */
-  width: 250px;
+  width: 200px;
 }
 
 .list {

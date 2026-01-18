@@ -1,0 +1,144 @@
+.servicehighlights {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+/* ================= HEADER ================= */
+
+.serviceheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  background-color: red;
+  padding: 10px;
+}
+
+.serviceheader h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.seeall {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= IMAGE ================= */
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: #f3f4f6;
+}
+
+.image {
+  object-fit: contain;
+  padding: 16px;
+}
+
+/* ================= ICON BADGE ================= */
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= TEXT ================= */
+
+.text {
+  padding: 42px 20px 26px;
+}
+
+.text h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.text p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ================= ARROW ================= */
+
+.arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #9ca3af;
+}
+
+/* ================= ACCENT COLORS ================= */
+
+.blue .iconWrap {
+  color: #2563eb;
+}
+
+.green .iconWrap {
+  color: #16a34a;
+}
+
+.orange .iconWrap {
+  color: #ea580c;
+}
+
+.purple .iconWrap {
+  color: #7c3aed;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .imageWrap {
+    height: 130px;
+  }
+
+  .iconWrap {
+    top: 105px;
+  }
+
+  .text {
+    padding: 40px 18px 22px;
+  }
+}

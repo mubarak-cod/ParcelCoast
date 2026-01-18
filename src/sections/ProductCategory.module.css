@@ -1,0 +1,81 @@
+.wrapper {
+  padding: 3rem 1.5rem;
+  background: #fafafa;
+}
+
+.header {
+  text-align: left;
+  background-color: red;
+  color: #ffffff;
+  padding: 5px 20px;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 0.5rem;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 20px;
+}
+
+.categoryCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.212);
+}
+
+.categoryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  margin-bottom: 1rem;
+}
+
+.imageWrapper img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.categoryCard h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.categoryCard p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.8rem;
+}
+
+.categoryCard span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #16a34a;
+}

@@ -21,7 +21,7 @@ const HeroPromo = () => {
         <div className={styles.card}>
           <BanknoteArrowUp className={styles.icon} />
           <div>
-            <p className={styles.title}>Hire am errand person</p>
+            <p className={styles.title}>Hire an errand person</p>
             <span className={styles.text}>Book a service easily</span>
           </div>
         </div>
@@ -41,6 +41,15 @@ const HeroPromo = () => {
           loop
           autoplay
         />
+      </div>
+
+      <div className={styles.cta}>
+        {/* <button>
+          Shop Now
+        </button> */}
+        {/* <button>
+          Explore Deals
+        </button> */}
       </div>
     </div>
   );

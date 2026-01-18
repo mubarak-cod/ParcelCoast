@@ -11,7 +11,7 @@ export default function ParcelChat() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // setMounted(true);
   }, []);
 
   return (
@@ -20,15 +20,15 @@ export default function ParcelChat() {
       {/* CHAT ICON */}
       <motion.div
         initial={{ scale: 1 }}
-        animate={{
-          rotate: [0, -4, 4, -3, 3, -2, 0],
-          y: [0, -2, 2, -1, 1, 0],
-        }}
-        transition={{
-          duration: 2.8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        // animate={{
+        //   rotate: [0, -4, 4, -3, 3, -2, 0],
+        //   y: [0, -2, 2, -1, 1, 0],
+        // }}
+        // transition={{
+        //   duration: 2.8,
+        //   repeat: Infinity,
+        //   ease: "easeInOut",
+        // }}
         className={styles.chatIcon}
         onClick={() => setOpen(true)}
       > 
@@ -43,9 +43,9 @@ export default function ParcelChat() {
 
         {!open && (
           <motion.span
-            initial={{ x: 10, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            // initial={{ x: 10, opacity: 0 }}
+            // animate={{ x: 0, opacity: 1 }}
+            // transition={{ delay: 0.2 }}
             className={styles.chatLabel}
           >
             Chat with Chinedu AI

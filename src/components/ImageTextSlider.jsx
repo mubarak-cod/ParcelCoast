@@ -1,12 +1,11 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/navigation";
 
 import Image from "next/image";
 import styles from "./ImageTextSlider.module.css";
@@ -66,11 +65,6 @@ const slides = [
       "https://res.cloudinary.com/dmtfdnuap/image/upload/v1766427059/928a9ced-c6e2-4cd8-bb43-dd4cc77bdc1d.png",
     text: "Faith that stands strong",
   },
-  // {
-  //   id: 10,
-  //   image: "https://res.cloudinary.com/dmtfdnuap/image/upload/v1766427059/928a9ced-c6e2-4cd8-bb43-dd4cc77bdc1d.png",
-  //   text: "Moments of divine encounter",
-  // },
   {
     id: 11,
     image:
@@ -89,33 +83,25 @@ export default function ImageTextSlider() {
   return (
     <div className={styles.wrapper}>
       <Swiper
-  modules={[Autoplay, Pagination]}
-  autoplay={{ delay: 5000, disableOnInteraction: false }}
-  pagination={{ clickable: true }}
-  loop
-  spaceBetween={10}
-  slidesPerView={1}
-  breakpoints={{
-    0: {
-      slidesPerView: 1.2,
-    },
-    360: {
-      slidesPerView: 3.5,
-    },
-    468: {
-      slidesPerView: 4.1, 
-    },
-    768: {
-      slidesPerView: 4.2,
-    },
-    1024: {
-      slidesPerView: 5.2,
-    },
-  }}
-  grabCursor
-  className={styles.swiper}
->
-
+        modules={[Autoplay, Pagination, Navigation]}
+        autoplay={{
+          delay: 4500,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        navigation
+        loop
+        spaceBetween={12}
+        breakpoints={{
+          0: { slidesPerView: 1.4 },
+          360: { slidesPerView: 2.6 },
+          468: { slidesPerView: 3.2 },
+          768: { slidesPerView: 4.2 },
+          1024: { slidesPerView: 9.2 },
+        }}
+        grabCursor
+        className={styles.swiper}
+      >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className={styles.card}>
@@ -124,10 +110,10 @@ export default function ImageTextSlider() {
                   src={slide.image}
                   alt={slide.text}
                   fill
+                  sizes="120px"
                   className={styles.image}
                 />
               </div>
-
               <p className={styles.text}>{slide.text}</p>
             </div>
           </SwiperSlide>

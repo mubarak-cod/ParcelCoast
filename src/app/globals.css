@@ -2,8 +2,8 @@
    CSS VARIABLES (THEME TOKENS)
 ================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
 
   /* Typography */
   --font-satoshi: system-ui, -apple-system, BlinkMacSystemFont,
@@ -13,7 +13,7 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #fff;
     --foreground: #000000;
   }
 }
@@ -92,6 +92,7 @@ select {
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
+  font-size: 2rem;
 }
 
 h2 {

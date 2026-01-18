@@ -1,0 +1,138 @@
+.featuredproducts {
+  padding: 3rem 1.5rem;
+  background: #f9fafb;
+}
+
+/* Header */
+.featuredheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: red;
+  padding: 10px;
+  color: white;
+}
+
+.featuredheader h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.seeall {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.seeall:hover {
+  text-decoration: underline;
+}
+
+/* Grid */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card */
+.productCard {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.productCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Discount Badge */
+.discountBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Image */
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.imageWrapper img {
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover img {
+  transform: scale(1.05);
+}
+
+/* Info */
+.productInfo h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #111827;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+/* Price */
+.price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.discountPrice {
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.oldPrice {
+  font-size: 0.85rem;
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Button */
+.cartBtn {
+  width: 100%;
+  padding: 0.6rem;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cartBtn:hover {
+  background: #15803d;
+}

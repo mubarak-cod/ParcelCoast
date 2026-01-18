@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, Gift, X } from "lucide-react";
+import {  ChartColumnStacked, Gift, X } from "lucide-react";
 
 import styles from "./Hero.module.css";
 import HeroCategories from "./HeroCategories";
@@ -24,7 +24,7 @@ const Hero = () => {
       {/* MOBILE BUTTONS */}
       <div className={styles.mobileControls}>
         <button onClick={() => setLeftOpen(true)}>
-          <Menu size={20} />
+          <ChartColumnStacked color="orange" size={20} />
         </button>
 
         <button onClick={() => setRightOpen(true)}>
